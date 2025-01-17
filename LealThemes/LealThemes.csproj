@@ -1,9 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <UseWindowsForms>True</UseWindowsForms>
+        <Title>LealForms.LealThemes</Title>
+        <PackageId>LealForms.LealThemes</PackageId>
+        <Authors>Eduardo Ribeiro Leal</Authors>
+        <PackageProjectUrl>https://github.com/LealForms</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/LealForms/LealThemes</RepositoryUrl>
+        <Description>LealForms.LealThemes is a powerful .NET package designed to manage themes</Description>
+        <Product>LealForms.LealThemes</Product>
+        <PackageTags>forms, ui, winforms, gui, lib, themes</PackageTags>
+        <PackageReleaseNotes>Please check the release in github to get more details of what changed</PackageReleaseNotes>
+        <NeutralLanguage>en</NeutralLanguage>
+        <Copyright>Swellshinider</Copyright>
+    </PropertyGroup>
 </Project>
