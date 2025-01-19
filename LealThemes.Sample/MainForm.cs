@@ -29,12 +29,14 @@ public sealed class MainForm : Form
 		// Define the rules to apply the theme
 		var rules = new Dictionary<Control, List<RuleStyle>>()
 		{
-			{ this, [
+			{ this, 
+			[
 				new() { PropertyName = nameof(BackColor), Target = Target.BackgroundColor },
 			]},
-			{ labelText, [
+			{ labelText, 
+			[
 				new() { PropertyName = nameof(labelText.ForeColor), Target = Target.ForegroundColor },
-				new() { PropertyName = nameof(labelText.Font), Target = Target.TitleFont }
+				new() { PropertyName = nameof(labelText.Font), Target = Target.TitleFont },
 			]}
 		};
 		

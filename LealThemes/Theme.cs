@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace LealThemes;
 
 /// <summary>
@@ -9,13 +11,14 @@ public class Theme
 {
 	private Dictionary<Target, object>? _targets;
 
-    /// <summary>
-    /// Gets the dictionary of theme targets and their corresponding values.
-    /// </summary>
-    /// <value>
-    /// A dictionary where the key is a <see cref="Target"/> enumeration value and the value is an object representing the theme setting for that target.
-    /// </value>
-    public virtual Dictionary<Target, object> Targets => _targets ??= new()
+	/// <summary>
+	/// Gets the dictionary of theme targets and their corresponding values.
+	/// </summary>
+	/// <value>
+	/// A dictionary where the key is a <see cref="Target"/> enumeration value and the value is an object representing the theme setting for that target.
+	/// </value>
+	[JsonIgnore]
+	public virtual Dictionary<Target, object> Targets => _targets ??= new()
 	{
 		{ Target.TitleFont, TitleFont },
 		{ Target.NormalFont, NormalFont },
@@ -43,8 +46,8 @@ public class Theme
 		{ Target.AuxiliaryColor9, AuxiliaryColor9 }
 	};
 
-    #region Fonts
-    public Font TitleFont { get; set; } = new("Arial", 16, FontStyle.Regular);
+	#region Fonts
+	public Font TitleFont { get; set; } = new("Arial", 16, FontStyle.Regular);
 	public Font NormalFont { get; set; } = new("Arial", 12, FontStyle.Regular);
 	public Font SecondaryFont { get; set; } = new("Arial", 12, FontStyle.Regular);
 	public Font AuxiliaryFont { get; set; } = new("Arial", 12, FontStyle.Regular);
