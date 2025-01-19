@@ -8,6 +8,9 @@ public static class ThemeGenerator
 	/// <summary>
 	/// Generates a new theme with fully random colors.
 	/// </summary>
+	/// <remarks>
+	/// Not implemented yet.
+	/// </remarks>
 	/// <returns>
 	/// A new theme with fully random colors.
 	/// </returns>
@@ -20,6 +23,9 @@ public static class ThemeGenerator
 	/// <param name="themeType">
 	/// The type of the theme.
 	/// </param>
+	/// <remarks>
+	/// Not implemented yet.
+	/// </remarks>
 	/// <returns>
 	///	A new theme with random colors based on the specified theme type.
 	/// </returns> 

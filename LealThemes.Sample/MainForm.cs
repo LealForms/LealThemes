@@ -15,7 +15,6 @@ public sealed class MainForm : Form
 			Dock = DockStyle.Fill,
 			AutoSize = false,
 			TextAlign = ContentAlignment.MiddleCenter,
-			Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0),
 		};
 		Controls.Add(labelText); // Add the label to the form
 		
@@ -24,18 +23,18 @@ public sealed class MainForm : Form
 		{
 			BackgroundColor = Color.FromArgb(0, 0, 0),
 			ForegroundColor = Color.FromArgb(255, 255, 255),
+			TitleFont = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0)
 		};
 		
 		// Define the rules to apply the theme
 		var rules = new Dictionary<Control, List<RuleStyle>>()
 		{
 			{ this, [
-				new() { PropertyName = nameof(BackColor), Target = ThemeTarget.BackgroundColor },
-				new() { PropertyName = nameof(ForeColor), Target = ThemeTarget.ForegroundColor },
+				new() { PropertyName = nameof(BackColor), Target = Target.BackgroundColor },
 			]},
 			{ labelText, [
-				new() { PropertyName = nameof(BackColor), Target = ThemeTarget.BackgroundColor },
-				new() { PropertyName = nameof(ForeColor), Target = ThemeTarget.ForegroundColor },
+				new() { PropertyName = nameof(labelText.ForeColor), Target = Target.ForegroundColor },
+				new() { PropertyName = nameof(labelText.Font), Target = Target.TitleFont }
 			]}
 		};
 		

@@ -71,6 +71,18 @@ public class ThemeController
 		return this;
 	}
 	
-	private object GetValueByTarget(ThemeTarget target)
-		=> Theme.Targets.TryGetValue(target, out var color) ? color : throw new ArgumentException($"Target {target} not found in theme");
+	/// <summary>
+	/// Get the value by target.
+	/// </summary>
+	/// <param name="target">
+	/// The target to get the value.
+	/// </param>
+	/// <returns>
+	/// The value of the target.
+	/// </returns>
+	/// <exception cref="ArgumentException">
+	/// Thrown when the target not found in the theme.
+	/// </exception>
+	private object GetValueByTarget(Target target)
+		=> Theme.Targets.TryGetValue(target, out var objValue) ? objValue : throw new ArgumentException($"Target {target} not found in theme");
 }
